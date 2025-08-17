@@ -1,0 +1,246 @@
+/* ===== RESET & GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9fb;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d6336c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #d6336c;
+}
+
+/* ===== CONTROLS (Search & Filter) ===== */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  flex-wrap: wrap;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+/* Search bar */
+#searchBar {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+#searchBar:focus {
+  border-color: #d6336c;
+  box-shadow: 0 0 6px rgba(214, 51, 108, 0.3);
+  outline: none;
+}
+
+/* Dropdown filter */
+#categoryFilter {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff;
+  cursor: pointer;
+  transition: border 0.2s ease;
+}
+
+#categoryFilter:hover {
+  border-color: #d6336c;
+}
+
+/* ===== KATALOG ===== */
+#catalog {
+  padding: 0 20px;
+  margin: auto;
+}
+
+.category h2 {
+  margin: 20px 0 15px;
+  font-size: 22px;
+  color: #444;
+  border-left: 5px solid #d6336c;
+  padding-left: 10px;
+}
+
+/* Grid produk */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* ===== CARD PRODUK ===== */
+.product {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-content h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+
+.product-content .desc {
+  font-size: 14px;
+  color: #666;
+  flex-grow: 1;
+}
+
+.product-content .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+
+.product-content .price-tag {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Tag kategori */
+.product-content .tag {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #ffe5eb;
+  color: #d6336c;
+  font-size: 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+
+/* Tombol WhatsApp */
+.wa-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #d6336c;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background 0.2s ease;
+}
+
+.wa-btn:hover {
+  background: #b02557;
+}
+
+.wa-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease;
+  z-index: 2000;
+}
+
+.wa-floating:hover {
+  background: #1ebc57;
+}
+
+/* Note */
+.note {
+  margin-top: 30px;
+  padding: 15px 20px;
+  background: #fff8fa;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* bisa diganti jadi hamburger menu */
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls input,
+  .controls select {
+    width: 100%;
+  }
+}
