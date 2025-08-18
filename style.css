@@ -126,6 +126,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 20px;
 }
 
 .product:hover {
@@ -134,16 +135,11 @@ body {
 }
 
 .product img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+  @apply w-full max-h-64 object-cover;
 }
 
 .product-content {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  @apply p-4 flex flex-col gap-2 flex-grow;
 }
 
 .product-content h3 {
