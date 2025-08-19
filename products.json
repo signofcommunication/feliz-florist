@@ -147,6 +147,18 @@
         "image": "./images/Bunga Papan/WhatsApp Image 2025-08-13 at 07.36.44_14f01ac3.jpg",
         "description": "Bunga papan 3 jambul ukuran 120x200",
         "price": 750000
+      },
+      {
+        "name": "Bunga Papan",
+        "image": "./images/Bunga Papan/WhatsApp Image 2025-08-18 at 10.17.00_e981da92.jpg",
+        "description": "Bunga papan ukuran 120x200",
+        "price": 550000
+      },
+      {
+        "name": "Bunga Papan",
+        "image": "./images/Bunga Papan/WhatsApp Image 2025-08-18 at 10.17.00_e981da92.jpg",
+        "description": "Bunga papan ukuran 150x200",
+        "price": 900000
       }
     ]
   },
